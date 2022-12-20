@@ -86,7 +86,7 @@ const SignupContextProvider = ({ children }) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    fetch("http://localhost:8080/auth/signup", requestOptions)
+    fetch("/auth/signup", requestOptions)
       .then((response) => {
         if (response.ok)
           response.json().then((data) => {

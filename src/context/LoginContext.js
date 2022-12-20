@@ -108,7 +108,7 @@ const LoginContextProvider = ({ children }) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    fetch("http://localhost:8080/auth/login", requestOptions)
+    fetch("/auth/login", requestOptions)
       .then((response) => {
         if (response.ok)
           response.json().then((data) => {
@@ -146,7 +146,7 @@ const LoginContextProvider = ({ children }) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    fetch("http://localhost:8080/add", requestOptions)
+    fetch("/add", requestOptions)
       .then((response) => {
         if (response.ok)
           response.json().then((data) => {
