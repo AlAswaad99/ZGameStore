@@ -28,7 +28,7 @@
     "build-and-start": "npm run build && npm start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "node server/index.js",
+    "start": "NODE_ENV=production node server/index.js",
     "dev": "nodemon server/index.js"
   },
   "eslintConfig": {
