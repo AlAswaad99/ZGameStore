@@ -29,9 +29,4 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
-        run: |
-          if [ -z "$VERCEL_TOKEN" ]; then
-            echo "Set the VERCEL_TOKEN secret in your repository."
-            exit 1
-          fi
-          vercel --token ${{ secrets.VERCEL_TOKEN }}
+        run: vercel --token ${{ secrets.VERCEL_TOKEN }}
