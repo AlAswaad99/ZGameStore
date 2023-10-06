@@ -74,10 +74,10 @@ const LoginPage = () => {
         <Grid item xs={12} md={6} style={{ margin: "auto" }}>
           <div className="px-8">
             <Typography style={{ fontWeight: "bold" }} variant="h1">
-              THE
+              THEE
             </Typography>{" "}
             <Typography style={{ fontWeight: "bold" }} variant="h1">
-              GAME
+              GAMERS
             </Typography>{" "}
             <Typography style={{ fontWeight: "bold" }} variant="h1">
               STORE
