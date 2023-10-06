@@ -92,7 +92,7 @@ const SignupContextProvider = ({ children }) => {
           response.json().then((data) => {
             setdoneUserSignup(true);
             setUserInfo(data);
-            history.replace("/login");
+            history.replace("/home");
           });
         else {
           response.json().then((data) => {

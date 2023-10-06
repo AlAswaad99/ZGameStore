@@ -26,6 +26,7 @@
     "start-react": "react-scripts start",
     "build": "react-scripts build",
     "build-and-start": "npm run build && npm start",
+    "build-and-dev": "npm run build && nodemon server/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "NODE_ENV=production node server/index.js",

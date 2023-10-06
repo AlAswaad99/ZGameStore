@@ -137,7 +137,7 @@ const LoginPage = () => {
               class="appearance-none block w-full bg-white-200 text-sm text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-password"
               name="password"
-              type="text"
+              type="password"
               value={user.password}
               onChange={setValue}
             />

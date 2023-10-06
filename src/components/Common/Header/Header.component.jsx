@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import "./Header.styles.scss";
 import { LoginContext } from "../../../context/LoginContext";
 
-const Header = ({user, logout}) => {
+const Header = ({ user, logout }) => {
   const history = useHistory();
   // const { UserInfo } = useContext(LoginContext);
   // console.log(user);
@@ -18,9 +18,8 @@ const Header = ({user, logout}) => {
             THE GAME STORE
           </h1>
         </Link>
-        <div>
-          
-          <Link to="/mygames" className="navbar__item">
+        <div className="flex items-center">
+          <Link to="/mygames" className="navbar__item mr-5">
             <Typography
               variant="button"
               color="inherit"
@@ -29,7 +28,12 @@ const Header = ({user, logout}) => {
               MY GAMES
             </Typography>
           </Link>
-          <div to="/genres" className="navbar__item__name" >
+
+          <div
+            to="/genres"
+            className="navbar__item__name cursor-default w-10"
+          ></div>
+          <div to="/genres" className="navbar__item__name cursor-default pl-5 ">
             <Typography
               variant="button"
               color="inherit"
@@ -38,11 +42,24 @@ const Header = ({user, logout}) => {
               HI, {user.username}
             </Typography>
           </div>
-          <Link className="navbar__item" onClick={e => logout()}>
-          <Typography variant="button" color="inherit" style={{fontWeight: 'bold'}}>
-            Logout
-          </Typography>
-        </Link>
+
+          <div
+            className="navbar__item cursor-pointer"
+            onClick={(e) => logout()}
+          >
+            {/* <Typography
+              variant="button"
+              color="inherit"
+              style={{ fontWeight: "bold" }}
+            >
+              Logout
+            </Typography> */}
+            <img
+              src="/logout.png"
+              alt="Logout"
+              className="w-10 h-10 cursor-pointer"
+            />
+          </div>
         </div>
       </Toolbar>
     </AppBar>
